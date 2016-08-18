@@ -18,8 +18,8 @@
 				"*.sublime-project",
 				"*.sublime-workspace",
 				".project",
-				".cproject",
-				"cscope.out"
+				".cproject"
+				
 			],
 			"folder_exclude_patterns":
 			[
