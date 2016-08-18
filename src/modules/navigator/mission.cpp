@@ -845,8 +845,8 @@ Mission::heading_sp_update()
 	if (_waypoint_position_reached && _mission_item.time_inside > 0.0f) {
 		// XXX: should actually be param4 from mission item
 		// at the moment it will just keep the heading it has
-		//_mission_item.yaw = _on_arrival_yaw;
-		//pos_sp_triplet->current.yaw = _mission_item.yaw;
+		_mission_item.yaw = _on_arrival_yaw;
+		pos_sp_triplet->current.yaw = _mission_item.yaw;
 
 	} else {
 		/* Calculate direction the vehicle should point to. */
