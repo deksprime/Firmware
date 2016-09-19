@@ -622,6 +622,7 @@ Navigator::task_main()
 		}
 
 		if (_pos_sp_triplet_updated) {
+			_pos_sp_triplet.timestamp = hrt_absolute_time();
 			publish_position_setpoint_triplet();
 			_pos_sp_triplet_updated = false;
 		}
@@ -878,7 +879,6 @@ Navigator::publish_mission_result()
 	}
 
 	/* reset some of the flags */
-	_mission_result.seq_reached = false;
 	_mission_result.seq_current = 0;
 	_mission_result.item_do_jump_changed = false;
 	_mission_result.item_changed_index = 0;
